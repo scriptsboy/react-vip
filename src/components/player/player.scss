@@ -1,0 +1,237 @@
+.player {
+    text-align: center;
+    min-height: 300px;
+    .iframe{
+        display: inline-block;
+        position: relative;
+        background: #333;
+    }
+
+    .iframe-fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        background: #333;
+    }
+    .btn-fixed{
+        position: fixed;  
+        z-index: 1000;
+        visibility: hidden;
+    }
+    .url-btn{
+        position: absolute;
+        visibility: hidden;
+    }
+    aside{
+        display: flex;
+        flex-direction: column;
+        left: 10px;
+        top: 10px;
+        z-index: 100;
+        p {
+            color: #fff;
+            font-size: 12px;
+            cursor: default;
+            height: 20px;
+        }
+        span {
+            width: 20px;
+            height: 20px;
+            color: #fff;
+            line-height: 20px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background: #999;
+        }
+        .on {
+            background: #51c7a2;
+        }
+    }
+    .control-warp{
+        display: inline-block;
+        .hd-input {
+            height: 60px;
+            padding-top: 20px;
+            display: flex;
+            align-items: center;
+            .live-item{
+                margin-right: 10px;
+                font-size: 14px;
+                float: left;
+                color: #777;
+                cursor: pointer;
+            }
+            .live-item:hover{
+                color: #7d89fa;
+            }
+            .live-item.on{color: #4d74f5;}
+            .hd-lable{
+                margin-right: 10px;
+                color: #484848;
+                font-size: 18px;
+                flex: 2;
+            }
+            .input-warp {
+                display: inline-block;
+                position: relative;
+                height: 40px;
+                flex: 11;
+            }
+            .icon-play {
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                background: url('../../assets/player.png') no-repeat 0 1px;
+                background-size: 30px 30px;
+                background-position: 0 4px;
+                right: 2px;
+                top: 0;
+            }
+            .icon-search {
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                background: url('../../assets/search.png') no-repeat 0 1px;
+                background-size: 30px 30px;
+                background-position: 0 4px;
+                right: 2px;
+                top: 0;
+            }
+            input {
+                width: 100%;
+                height: 100%;
+                padding-left: 10px;
+                padding-right: 40px;
+                background: #f2f2f2;
+                border: 1px solid #ccc;
+            }
+
+            input::placeholder {
+                color: #999;
+            }
+
+            @media only screen and (max-width: 992px) {
+
+                /* 当设备宽度小于等于992px时 */
+                .input-warp {
+                    width: 70%;
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+
+                /* 当设备宽度小于等于600px时 */
+                .input-warp {
+                    width: 100%;
+
+                }
+            }
+
+            @media only screen and (min-width: 993px) {
+
+                /* 当设置宽度大于等于993px时 */
+                .input-warp {
+                    width: 50%;
+                }
+            }
+        }        
+    }
+
+
+    .iframe:hover .url-btn,.iframe:hover .btn-fixed{
+        visibility: visible;
+    }
+
+    iframe,#dp-warp{
+        width: 100%;
+        height: 100%;
+    }
+    
+    @media only screen and (max-width: 992px) {
+
+        /* 当设备宽度小于等于992px时 */
+        .iframe {
+            width: 80%;
+            height: 300px;
+        }
+        .control-warp{
+            width: 80%;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        /* 当设备宽度小于等于600px时 */
+        .iframe {
+            width: 100%;
+            height: 240px;
+        }
+        .control-warp{
+            width: 100%;
+            padding: 0 5px;
+        }
+    }
+
+    @media only screen and (min-width: 993px) {
+
+        /* 当设置宽度大于等于993px时 */
+        .iframe {
+            width: 60%;
+            height: 500px;
+        }
+        .control-warp{
+            width: 60%;
+        }
+    }
+
+}
+
+        .text {
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+            line-height: 40px;
+            padding-bottom: 40px;
+        }
+
+        .text .line {
+            border-bottom: 1px solid rgb(170, 169, 169);
+            width: 60%;
+            display: inline-block;
+        }
+
+        .text .left {
+            width: 60%;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .fw {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .link {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            margin-right: 20px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: rgb(3, 170, 128);
+        }
+
+        @media only screen and (max-width: 992px) {
+            .text .line {
+                width: 80%;
+            }
+
+            .text .left {
+                width: 80%;
+            }
+        }
